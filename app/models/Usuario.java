@@ -25,6 +25,10 @@ public class Usuario extends Model {
         this.saldo = saldo;
     }
 
+    public void añadirApuesta(Partido partido, double importe, String pronostico){
+
+    }
+
     public String getUsername() {
         return username;
     }

@@ -2,7 +2,68 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3c12a53-e680-44fc-ac3f-3dbe24327a86" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FirstApp/app/views/Application/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FirstApp/app/views/Application/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FirstApp/app/views/Application/start.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FirstApp/app/views/Application/usernotfound.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Apuestas/.idea/Apuestas.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Apuestas/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Apuestas/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Apuestas/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Apuestas/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Apuestas/app/controllers/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Apuestas/app/views/Application/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Apuestas/app/views/errors/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Apuestas/app/views/errors/500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Apuestas/app/views/main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Apuestas/conf/application.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Apuestas/conf/dependencies.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Apuestas/conf/messages" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Apuestas/conf/routes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Apuestas/documentation/files/manual.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Apuestas/documentation/files/wiki.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Apuestas/documentation/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Apuestas/documentation/template.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Apuestas/documentation/welcome.textile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Apuestas/modules/docviewer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Apuestas/public/images/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Apuestas/public/javascripts/jquery-1.6.4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Apuestas/public/stylesheets/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Apuestas/test/Application.test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Apuestas/test/ApplicationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Apuestas/test/BasicTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Apuestas/test/data.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apuestas_Deportivas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Apuestas_Deportivas.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apuestas_Deportivas.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/Apuestas_Deportivas.ipr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apuestas_Deportivas.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Apuestas_Deportivas.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/Application/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Application/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/Application/start.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Application/start.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FirstApp/FirstApp.iws" beforeDir="false" afterPath="$PROJECT_DIR$/../FirstApp/FirstApp.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FirstApp/app/controllers/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FirstApp/app/controllers/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FirstApp/app/models/Apuesta.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FirstApp/app/models/Apuesta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FirstApp/app/models/Jornada.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FirstApp/app/models/Jornada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FirstApp/app/models/Partido.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FirstApp/app/models/Partido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FirstApp/app/models/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FirstApp/app/models/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FirstApp/conf/routes" beforeDir="false" afterPath="$PROJECT_DIR$/../FirstApp/conf/routes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FirstApp/test/BasicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FirstApp/test/BasicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FirstApp/tmp/bytecode/DEV/controllers.Application" beforeDir="false" afterPath="$PROJECT_DIR$/../FirstApp/tmp/bytecode/DEV/controllers.Application" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FirstApp/tmp/bytecode/DEV/models.Apuesta" beforeDir="false" afterPath="$PROJECT_DIR$/../FirstApp/tmp/bytecode/DEV/models.Apuesta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FirstApp/tmp/bytecode/DEV/models.Jornada" beforeDir="false" afterPath="$PROJECT_DIR$/../FirstApp/tmp/bytecode/DEV/models.Jornada" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FirstApp/tmp/bytecode/DEV/models.Partido" beforeDir="false" afterPath="$PROJECT_DIR$/../FirstApp/tmp/bytecode/DEV/models.Partido" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FirstApp/tmp/bytecode/DEV/models.Usuario" beforeDir="false" afterPath="$PROJECT_DIR$/../FirstApp/tmp/bytecode/DEV/models.Usuario" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FirstApp/tmp/classes/controllers/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FirstApp/tmp/classes/controllers/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FirstApp/tmp/classes/models/Apuesta.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FirstApp/tmp/classes/models/Apuesta.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FirstApp/tmp/classes/models/Jornada.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FirstApp/tmp/classes/models/Jornada.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FirstApp/tmp/classes/models/Partido.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FirstApp/tmp/classes/models/Partido.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FirstApp/tmp/classes/models/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FirstApp/tmp/classes/models/Usuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FirstApp/tmp/classes/production/FirstApp/controllers/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FirstApp/tmp/classes/production/FirstApp/controllers/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FirstApp/tmp/classes/production/FirstApp/models/Calendario.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FirstApp/tmp/classes/production/FirstApp/models/Calendario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FirstApp/tmp/classes/production/FirstApp/models/Equipo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FirstApp/tmp/classes/production/FirstApp/models/Equipo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FirstApp/tmp/classes/production/FirstApp/models/Jornada.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FirstApp/tmp/classes/production/FirstApp/models/Jornada.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FirstApp/tmp/classes/production/FirstApp/models/Jugador.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FirstApp/tmp/classes/production/FirstApp/models/Jugador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FirstApp/tmp/classes/production/FirstApp/models/Liga.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FirstApp/tmp/classes/production/FirstApp/models/Liga.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FirstApp/tmp/classes/production/FirstApp/models/Partido.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FirstApp/tmp/classes/production/FirstApp/models/Partido.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FirstApp/tmp/classes/test/FirstApp/BasicTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FirstApp/tmp/classes/test/FirstApp/BasicTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/tmp/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,25 +74,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1275">
+            <state relative-caret-position="283">
               <caret line="95" column="30" selection-start-line="95" selection-start-column="30" selection-end-line="95" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/Usuario.java">
+        <entry file="file://$PROJECT_DIR$/app/models/Jornada.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+            <state relative-caret-position="161">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#950#951#0" expanded="true" />
-                <element signature="e#979#980#0" expanded="true" />
+                <element signature="e#347#348#0" expanded="true" />
+                <element signature="e#393#394#0" expanded="true" />
+                <element signature="e#428#429#0" expanded="true" />
+                <element signature="e#462#463#0" expanded="true" />
+                <element signature="e#513#514#0" expanded="true" />
+                <element signature="e#559#560#0" expanded="true" />
+                <element signature="e#601#602#0" expanded="true" />
+                <element signature="e#632#633#0" expanded="true" />
+                <element signature="e#687#688#0" expanded="true" />
+                <element signature="e#727#728#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/BasicTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1649">
+              <caret line="106" column="42" selection-start-line="106" selection-start-column="42" selection-end-line="106" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/ApplicationTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -39,7 +126,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/Application/register.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
+            <state relative-caret-position="450">
               <caret line="115" selection-start-line="115" selection-end-line="115" />
             </state>
           </provider>
@@ -48,10 +135,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/Apuesta.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+            <state relative-caret-position="34">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#500#501#0" expanded="true" />
                 <element signature="e#530#531#0" expanded="true" />
                 <element signature="e#576#577#0" expanded="true" />
                 <element signature="e#614#615#0" expanded="true" />
@@ -76,19 +164,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/conf/routes">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="85">
               <caret line="5" column="65" selection-start-line="5" selection-start-column="65" selection-end-line="5" selection-end-column="65" />
             </state>
           </provider>
@@ -97,8 +176,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/Application/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+            <state relative-caret-position="119">
+              <caret line="7" column="135" selection-start-line="7" selection-start-column="135" selection-end-line="7" selection-end-column="135" />
             </state>
           </provider>
         </entry>
@@ -106,7 +185,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/conf/application.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1260">
+            <state relative-caret-position="1428">
               <caret line="84" selection-start-line="84" selection-end-line="84" />
             </state>
           </provider>
@@ -115,8 +194,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/Application/start.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5160">
-              <caret line="344" column="73" selection-start-line="344" selection-start-column="73" selection-end-line="344" selection-end-column="73" />
+            <state relative-caret-position="280">
+              <caret line="133" column="108" selection-start-line="133" selection-start-column="108" selection-end-line="133" selection-end-column="108" />
             </state>
           </provider>
         </entry>
@@ -140,7 +219,6 @@
         <option value="$PROJECT_DIR$/conf/application.conf" />
         <option value="$PROJECT_DIR$/app/models/Calendario.java" />
         <option value="$PROJECT_DIR$/app/views/Application/Login.html" />
-        <option value="$PROJECT_DIR$/app/views/Application/login.html" />
         <option value="$PROJECT_DIR$/app/models/Jornada.java" />
         <option value="$PROJECT_DIR$/app/models/Partido.java" />
         <option value="$PROJECT_DIR$/app/models/Apuesta.java" />
@@ -150,17 +228,18 @@
         <option value="$PROJECT_DIR$/test/BasicTest.java" />
         <option value="$PROJECT_DIR$/app/controllers/Application.java" />
         <option value="$PROJECT_DIR$/conf/routes" />
-        <option value="$PROJECT_DIR$/app/views/Application/start.html" />
         <option value="$PROJECT_DIR$/app/views/Application/register.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/app/views/Application/login.html" />
+        <option value="$PROJECT_DIR$/app/views/Application/start.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="55" />
-    <option name="y" value="23" />
+    <option name="y" value="21" />
     <option name="width" value="1335" />
-    <option name="height" value="827" />
+    <option name="height" value="829" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -168,7 +247,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -180,39 +258,32 @@
             <path>
               <item name="Apuestas_Deportivas" type="b2602c69:ProjectViewProjectNode" />
               <item name="Apuestas_Deportivas" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="Apuestas_Deportivas" type="462c0819:PsiDirectoryNode" />
+              <item name="ApuestasDeportivas" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Apuestas_Deportivas" type="b2602c69:ProjectViewProjectNode" />
               <item name="Apuestas_Deportivas" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="Apuestas_Deportivas" type="462c0819:PsiDirectoryNode" />
+              <item name="ApuestasDeportivas" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Apuestas_Deportivas" type="b2602c69:ProjectViewProjectNode" />
               <item name="Apuestas_Deportivas" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="Apuestas_Deportivas" type="462c0819:PsiDirectoryNode" />
+              <item name="ApuestasDeportivas" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Apuestas_Deportivas" type="b2602c69:ProjectViewProjectNode" />
               <item name="Apuestas_Deportivas" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="Apuestas_Deportivas" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Apuestas_Deportivas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Apuestas_Deportivas" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="Apuestas_Deportivas" type="462c0819:PsiDirectoryNode" />
+              <item name="ApuestasDeportivas" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Apuestas_Deportivas" type="b2602c69:ProjectViewProjectNode" />
               <item name="Apuestas_Deportivas" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="Apuestas_Deportivas" type="462c0819:PsiDirectoryNode" />
+              <item name="ApuestasDeportivas" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="Application" type="462c0819:PsiDirectoryNode" />
@@ -220,40 +291,21 @@
             <path>
               <item name="Apuestas_Deportivas" type="b2602c69:ProjectViewProjectNode" />
               <item name="Apuestas_Deportivas" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="Apuestas_Deportivas" type="462c0819:PsiDirectoryNode" />
-              <item name="conf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Apuestas_Deportivas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Apuestas_Deportivas" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="Apuestas_Deportivas" type="462c0819:PsiDirectoryNode" />
-              <item name="documentation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Apuestas_Deportivas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Apuestas_Deportivas" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="Apuestas_Deportivas" type="462c0819:PsiDirectoryNode" />
-              <item name="documentation" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Apuestas_Deportivas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Apuestas_Deportivas" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="Apuestas_Deportivas" type="462c0819:PsiDirectoryNode" />
-              <item name="documentation" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="ApuestasDeportivas" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553084241008" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553099273477" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -312,6 +364,8 @@
       <workItem from="1552993543704" duration="4346000" />
       <workItem from="1552998666044" duration="698000" />
       <workItem from="1553084090383" duration="151000" />
+      <workItem from="1553098263234" duration="205000" />
+      <workItem from="1553098628000" duration="1208000" />
     </task>
     <servers />
   </component>
@@ -348,13 +402,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26436000" />
+    <option name="totallyTimeSpent" value="27849000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="55" y="23" width="1335" height="827" extended-state="0" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2768755" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19127516" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -368,7 +421,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3292517" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.24645892" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3292517" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3292517" />
@@ -391,12 +444,25 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/models/Calendario.java" />
-    <entry file="file://$PROJECT_DIR$/app/models/Partido.java">
+    <entry file="file://$PROJECT_DIR$/app/views/Application/prueba.html" />
+    <entry file="file://$PROJECT_DIR$/app/views/Application/prueba_mario.html" />
+    <entry file="file://$PROJECT_DIR$/app/models/Usuario.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        <state relative-caret-position="119">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#950#951#0" expanded="true" />
+            <element signature="e#979#980#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Partido.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+          <folding>
             <element signature="e#1092#1093#0" expanded="true" />
             <element signature="e#1120#1121#0" expanded="true" />
             <element signature="e#1160#1161#0" expanded="true" />
@@ -437,95 +503,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Jornada.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-            <element signature="e#393#394#0" expanded="true" />
-            <element signature="e#428#429#0" expanded="true" />
-            <element signature="e#462#463#0" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#559#560#0" expanded="true" />
-            <element signature="e#601#602#0" expanded="true" />
-            <element signature="e#632#633#0" expanded="true" />
-            <element signature="e#687#688#0" expanded="true" />
-            <element signature="e#727#728#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/Application/prueba.html" />
-    <entry file="file://$PROJECT_DIR$/app/views/Application/prueba_mario.html" />
-    <entry file="file://$PROJECT_DIR$/test/BasicTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1455">
-          <caret line="106" column="42" selection-start-line="106" selection-start-column="42" selection-end-line="106" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="95" column="30" selection-start-line="95" selection-start-column="30" selection-end-line="95" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Usuario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#950#951#0" expanded="true" />
-            <element signature="e#979#980#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/conf/routes">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
+        <state relative-caret-position="85">
           <caret line="5" column="65" selection-start-line="5" selection-start-column="65" selection-end-line="5" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/Application/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/conf/application.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
+        <state relative-caret-position="1428">
           <caret line="84" selection-start-line="84" selection-end-line="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/Application/start.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5160">
-          <caret line="344" column="73" selection-start-line="344" selection-start-column="73" selection-end-line="344" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/Application/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="115" selection-start-line="115" selection-end-line="115" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Apuesta.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+        <state relative-caret-position="34">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#500#501#0" expanded="true" />
             <element signature="e#530#531#0" expanded="true" />
             <element signature="e#576#577#0" expanded="true" />
             <element signature="e#614#615#0" expanded="true" />
@@ -549,10 +554,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/app/models/Jornada.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        <state relative-caret-position="161">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#347#348#0" expanded="true" />
+            <element signature="e#393#394#0" expanded="true" />
+            <element signature="e#428#429#0" expanded="true" />
+            <element signature="e#462#463#0" expanded="true" />
+            <element signature="e#513#514#0" expanded="true" />
+            <element signature="e#559#560#0" expanded="true" />
+            <element signature="e#601#602#0" expanded="true" />
+            <element signature="e#632#633#0" expanded="true" />
+            <element signature="e#687#688#0" expanded="true" />
+            <element signature="e#727#728#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/ApplicationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/BasicTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1649">
+          <caret line="106" column="42" selection-start-line="106" selection-start-column="42" selection-end-line="106" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/Application/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="115" selection-start-line="115" selection-end-line="115" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/Application/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="135" selection-start-line="7" selection-start-column="135" selection-end-line="7" selection-end-column="135" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/Application/start.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="133" column="108" selection-start-line="133" selection-start-column="108" selection-end-line="133" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="95" column="30" selection-start-line="95" selection-start-column="30" selection-end-line="95" selection-end-column="30" />
         </state>
       </provider>
     </entry>

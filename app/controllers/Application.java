@@ -96,7 +96,7 @@ public class Application extends Controller {
     public static void register_params(String username, String pass, String name, String surname, String mail, String age) {
 
         Usuario found = Usuario.find("byUsername",username).first();
-        if(found!=null) {
+        if(found==null) {
             Usuario u = new Usuario(username, pass, name, surname, mail, Integer.parseInt(age), 0).save();
             renderTemplate("Application/login.html");
         }

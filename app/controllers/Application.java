@@ -8,7 +8,18 @@ import java.util.*;
 
 import models.*;
 
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+
 public class Application extends Controller {
+
+    HttpSession misession;
 
     public static void index() {
         render();
@@ -81,12 +92,16 @@ public class Application extends Controller {
 
         render();
     }
-    public static void login(String username, String pass) {
+    public static void login(String username, String pass/*, HttpServletRequest request, HttpServletResponse response*/){
         Usuario u = Usuario.find("byUsernameAndPassword",username,pass).first();
 
         if (u== null){
             renderText("Usuario incorrecto");
         }else{
+
+            /*HttpSession misession = request.getSession(true);
+            misession.setAttribute("usuario",u);
+*/
             render();
         }
     }
@@ -103,5 +118,12 @@ public class Application extends Controller {
         else {
             renderTemplate("errors/500.html");
         }
+    }
+
+    public static void getUser(HttpServletRequest request, HttpServletResponse response)
+    {
+        HttpSession misession= (HttpSession) request.getSession();
+        Usuario user= (Usuario) misession.getAttribute("usuario");
+        renderText(user.getNombre());
     }
 }

@@ -1,109 +1,134 @@
 package controllers;
 
 import com.google.gson.JsonObject;
+import org.hibernate.engine.jdbc.connections.internal.UserSuppliedConnectionProviderImpl;
 import play.*;
 import play.mvc.*;
+
+import play.*;
+import play.data.validation.*;
+
+import java.util.*;
 
 import java.util.*;
 
 import models.*;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
-
 public class Application extends Controller {
 
-    HttpSession misession;
+    @Before
+    static void addUser() {
+        Usuario user = connected();
+
+        if(user != null) {
+            renderArgs.put("user", user);
+        }
+    }
+    static Usuario connected() {
+
+        if(renderArgs.get("user") != null) {
+            return renderArgs.get("user", Usuario.class);
+        }
+        String username = session.get("user");
+        if(username != null) {
+            return Usuario.find("byUsername", username).first();
+        }
+        return null;
+    }
 
     public static void index() {
         render();
     }
     public static void start() {
 
-        //Creación de usuarios
-        Usuario u = new Usuario("carlo","carlo","Carlo","Gattuso Garrido","carlogc46@gmail.com",20,45).save();
-        Usuario m = new Usuario("mario","mario","Mario","Sanchez Boto","marioboto98@gmail.com",21,45).save();
-        Usuario p = new Usuario("hannibal","hannibal","Hannibal","Rabasso Dominguez","hannibalrd@gmail.com",20,45).save();
-        Usuario l = new Usuario("pol","pol","Pol","Gascon Tomas","polgt@gmail.com",20,40).save();
-        Usuario s = new Usuario("marta","marta","Marta","Delgado Palau","martadelgadopalau@gmail.com",21,45).save();
+        if(connected() != null) {
+            Usuario c = renderArgs.get("user", Usuario.class);
+            renderText("Connectat  " + c.getNombre() + c.getPassword());
+        }else {
 
-        Jornada j = new Jornada(1).save();
+            //Creación de usuarios
+            Usuario u = new Usuario("carlo", "carlo", "Carlo", "Gattuso Garrido", "carlogc46@gmail.com", 20, 45).save();
+            Usuario m = new Usuario("mario", "mario", "Mario", "Sanchez Boto", "marioboto98@gmail.com", 21, 45).save();
+            Usuario p = new Usuario("hannibal", "hannibal", "Hannibal", "Rabasso Dominguez", "hannibalrd@gmail.com", 20, 45).save();
+            Usuario l = new Usuario("pol", "pol", "Pol", "Gascon Tomas", "polgt@gmail.com", 20, 40).save();
+            Usuario s = new Usuario("marta", "marta", "Marta", "Delgado Palau", "martadelgadopalau@gmail.com", 21, 45).save();
 
-        //Crear partidos jornada 1
-        Partido p1 = new Partido(2019,5,15,13, 0,"Camp Nou","Barcelona","Real Madrid",1.5,3,2,"null").save();
-        Partido p2 = new Partido(2019,5,15,13, 0,"Mestalla","Valencia","Alaves",1.3,2.5,4,"null").save();
-        Partido p3 = new Partido(2019,5,15,13, 0,"Benito Villamarin","Betis","Sevilla",1.8,3,2.4,"null").save();
-        Partido p4 = new Partido(2019,5,15,13, 0,"Anoeta","Real Sociedad","Atletico de Madrid",2,3,1.8,"null").save();
-        Partido p5 = new Partido(2019,5,15,13, 0,"Balaidos","Celta de Vigo","Español",1.5,3,2,"null").save();
+            Jornada j = new Jornada(1).save();
 
-        j.partidos.add(p1);
-        j.partidos.add(p2);
-        j.partidos.add(p3);
-        j.partidos.add(p4);
-        j.partidos.add(p5);
+            //Crear partidos jornada 1
+            Partido p1 = new Partido(2019, 5, 15, 13, 0, "Camp Nou", "Barcelona", "Real Madrid", 1.5, 3, 2, "null").save();
+            Partido p2 = new Partido(2019, 5, 15, 13, 0, "Mestalla", "Valencia", "Alaves", 1.3, 2.5, 4, "null").save();
+            Partido p3 = new Partido(2019, 5, 15, 13, 0, "Benito Villamarin", "Betis", "Sevilla", 1.8, 3, 2.4, "null").save();
+            Partido p4 = new Partido(2019, 5, 15, 13, 0, "Anoeta", "Real Sociedad", "Atletico de Madrid", 2, 3, 1.8, "null").save();
+            Partido p5 = new Partido(2019, 5, 15, 13, 0, "Balaidos", "Celta de Vigo", "Español", 1.5, 3, 2, "null").save();
 
-        j.save();
+            j.partidos.add(p1);
+            j.partidos.add(p2);
+            j.partidos.add(p3);
+            j.partidos.add(p4);
+            j.partidos.add(p5);
 
-        //Crear apuestas
+            j.save();
 
-        Apuesta a;
+            //Crear apuestas
 
-        a = new Apuesta(5,"1").save();
-        a.usuario = u;
-        a.partido = p1;
-        a.jornada = j;
+            Apuesta a;
 
-        a.save();
+            a = new Apuesta(5, "1").save();
+            a.usuario = u;
+            a.partido = p1;
+            a.jornada = j;
+
+            a.save();
 
 
-        a = new Apuesta(5,"2").save();
-        a.usuario = m;
-        a.partido = p2;
-        a.jornada = j;
+            a = new Apuesta(5, "2").save();
+            a.usuario = m;
+            a.partido = p2;
+            a.jornada = j;
 
-        a.save();
+            a.save();
 
-        a = new Apuesta(5,"x").save();
-        a.usuario = p;
-        a.partido = p3;
-        a.jornada = j;
+            a = new Apuesta(5, "x").save();
+            a.usuario = p;
+            a.partido = p3;
+            a.jornada = j;
 
-        a.save();
+            a.save();
 
-        a = new Apuesta(10,"1").save();
-        a.usuario = l;
-        a.partido = p4;
-        a.jornada = j;
+            a = new Apuesta(10, "1").save();
+            a.usuario = l;
+            a.partido = p4;
+            a.jornada = j;
 
-        a.save();
+            a.save();
 
-        Apuesta e = new Apuesta(5,"1").save();
-        e.usuario = s;
-        e.partido = p5;
-        e.jornada = j;
+            Apuesta e = new Apuesta(5, "1").save();
+            e.usuario = s;
+            e.partido = p5;
+            e.jornada = j;
 
-        e.save();
+            e.save();
 
-        render();
-    }
-    public static void login(String username, String pass/*, HttpServletRequest request, HttpServletResponse response*/){
-        Usuario u = Usuario.find("byUsernameAndPassword",username,pass).first();
-
-        if (u== null){
-            renderText("Usuario incorrecto");
-        }else{
-
-            /*HttpSession misession = request.getSession(true);
-            misession.setAttribute("usuario",u);
-*/
             render();
         }
+    }
+    public static void login(String username, String pass){
+        Usuario u = Usuario.find("byUsernameAndPassword",username,pass).first();
+
+        if (u== null) {
+            renderText("Usuario incorrecto");
+        }
+            else {
+            session.put("user", u.username);
+        }
+        }
+    public static void logout() {
+        session.clear();
+        index();
+    }
+    public static void getInfoSession(){
+        renderText("Està connectat "+ session.get("user"));
     }
     public static void register(){
         render();
@@ -120,10 +145,5 @@ public class Application extends Controller {
         }
     }
 
-    public static void getUser(HttpServletRequest request, HttpServletResponse response)
-    {
-        HttpSession misession= (HttpSession) request.getSession();
-        Usuario user= (Usuario) misession.getAttribute("usuario");
-        renderText(user.getNombre());
-    }
+
 }

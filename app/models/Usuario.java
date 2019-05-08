@@ -1,5 +1,6 @@
 package models;
 
+import play.data.validation.Required;
 import play.db.jpa.Model;
 
 import javax.persistence.Entity;
@@ -7,8 +8,10 @@ import javax.persistence.Entity;
 @Entity
 public class Usuario extends Model {
 
-    String username;
-    String password;
+    @Required
+    public String username;
+    @Required
+    public String password;
     String nombre;
     String apellidos;
     String correo;
@@ -23,6 +26,11 @@ public class Usuario extends Model {
         this.correo = correo;
         this.edad = edad;
         this.saldo = saldo;
+    }
+
+    public static Usuario connect(String n, String p){
+        Usuario u = Usuario.find("byNomAndPassword",n,p).first();
+        return u;
     }
 
     public void añadirApuesta(Partido partido, double importe, String pronostico){

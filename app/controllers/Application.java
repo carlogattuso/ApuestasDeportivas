@@ -18,6 +18,7 @@ public class Application extends Controller {
 
     @Before
     static void addUser() {
+
         Usuario user = connected();
 
         if(user != null) {
@@ -43,7 +44,7 @@ public class Application extends Controller {
 
         if(connected() != null) {
             Usuario c = renderArgs.get("user", Usuario.class);
-            renderText("Connectat  " + c.getNombre() + c.getPassword());
+            renderTemplate("Application/HomePage.html");
         }else {
 
             //Creación de usuarios
@@ -121,14 +122,18 @@ public class Application extends Controller {
         }
             else {
             session.put("user", u.username);
+            renderTemplate("Application/HomePage.html");
         }
         }
     public static void logout() {
         session.clear();
-        index();
     }
     public static void getInfoSession(){
         renderText("Està connectat "+ session.get("user"));
+    }
+    public static void getUsername(){
+        Usuario user = Usuario.find("byUsername",session.get("user")).first();
+        renderJSON(user);
     }
     public static void register(){
         render();
@@ -138,7 +143,7 @@ public class Application extends Controller {
         Usuario found = Usuario.find("byUsername",username).first();
         if(found==null) {
             Usuario u = new Usuario(username, pass, name, surname, mail, Integer.parseInt(age), 0).save();
-            renderTemplate("Application/login.html");
+            renderTemplate("Application/HomePage.html");
         }
         else {
             renderTemplate("errors/500.html");

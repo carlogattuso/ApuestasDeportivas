@@ -53,17 +53,13 @@ public class Application extends Controller {
             Jornada j = new Jornada(1).save();
 
             //Crear partidos jornada 1
-            Partido p1 = new Partido(2019, 5, 15, 13, 0, "Camp Nou", "Barcelona", "Real Madrid", 1.5, 3, 2, "null").save();
-            Partido p2 = new Partido(2019, 5, 15, 13, 0, "Mestalla", "Valencia", "Alaves", 1.3, 2.5, 4, "null").save();
-            Partido p3 = new Partido(2019, 5, 15, 13, 0, "Benito Villamarin", "Betis", "Sevilla", 1.8, 3, 2.4, "null").save();
-            Partido p4 = new Partido(2019, 5, 15, 13, 0, "Anoeta", "Real Sociedad", "Atletico de Madrid", 2, 3, 1.8, "null").save();
-            Partido p5 = new Partido(2019, 5, 15, 13, 0, "Balaidos", "Celta de Vigo", "Español", 1.5, 3, 2, "null").save();
+            Partido p1 = new Partido(2019, 5, 15, 13, 0, "Old Trafford", "Manchester United", "Arsenal", 1.5, 3, 2, "null").save();
+            Partido p2 = new Partido(2019, 5, 15, 13, 0, "Anfield", "Liverpool", "Chelsea", 1.3, 2.5, 4, "null").save();
+            Partido p3 = new Partido(2019, 5, 15, 13, 0, "Tottenham Hotspur Stadium\n", "Tottenham", "Mancherster City", 1.8, 3, 2.4, "null").save();
 
             j.partidos.add(p1);
             j.partidos.add(p2);
             j.partidos.add(p3);
-            j.partidos.add(p4);
-            j.partidos.add(p5);
 
             j.save();
 
@@ -92,20 +88,6 @@ public class Application extends Controller {
             a.jornada = j;
 
             a.save();
-
-            a = new Apuesta(10, "1").save();
-            a.usuario = l;
-            a.partido = p4;
-            a.jornada = j;
-
-            a.save();
-
-            Apuesta e = new Apuesta(5, "1").save();
-            e.usuario = s;
-            e.partido = p5;
-            e.jornada = j;
-
-            e.save();
 
             renderTemplate("Application/start.html");
         }

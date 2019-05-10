@@ -117,9 +117,9 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#about">TEAMS</a></li>
-                <li><a href="#services">MATCH DAY</a></li>
-                <li><a href="#portfolio">MyBETS</a></li>
+                <li><a href="#teams">TEAMS</a></li>
+                <li><a href="#matchday">MATCH DAY</a></li>
+                <li><a href="#mybets">MyBETS</a></li>
             </ul>
         </div>
     </div>
@@ -131,10 +131,9 @@
     </div>
 
     <h1><b>MGame</b></h1>
-    <p></p>
 
 </div>
-<div class="container-fluid bg-grey text-center">
+<div id="teams" class="container-fluid bg-grey text-center">
     <p class="serif">TEAMS</p>
     <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
         <!-- Indicators -->
@@ -193,16 +192,24 @@
         </a>
     </div>
 </div>
-<table class="table table-striped" id="tabla_jornada">
+<div id="matchday" class="container-fluid text-center">
+    <p class="serif">MATCH DAY</p>
+    <table class="table table-striped" id="tabla_jornada">
     <thead>
     <tr class="bg-info">
-        <th class="text-center">ID</th>
-        <th class="text-center">Nombre</th>
+        <th class="text-center">Fecha</th>
+        <th class="text-center">Hora</th>
+        <th class="text-center">Local</th>
+        <th class="text-center">Visitante</th>
+        <th class="text-center">Estadio</th>
     </tr>
     </thead>
     <tbody>
     </tbody>
-</table>
+    </table>
+</div>
+<div id="mybets" class="container-fluid bg-grey text-center">
+</div>
 </body>
 <script>
     $(document).ready(function(){
@@ -236,7 +243,10 @@
                 var local = element.local;
                 console.log(data);
                 var visitante = element.visitante;
-                var insertion = "<tr><td>" + local + "</td><td>" + visitante + "</td></tr>";
+                var fecha = element.fecha;
+                var estadio = element.estadio;
+                var hora = element.hora;
+                var insertion = "<tr><td>" + fecha + "</td><td>" + hora + "</td><td>" + local + "</td><td>" + visitante + "</td><td>" + estadio + "</td></tr>";
                 $("#tabla_jornada tbody").append(insertion);
             });
         }, "json" );

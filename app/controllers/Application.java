@@ -36,10 +36,6 @@ public class Application extends Controller {
         }
         return null;
     }
-
-    public static void index() {
-        render();
-    }
     public static void start() {
 
         if(connected() != null) {
@@ -111,7 +107,7 @@ public class Application extends Controller {
 
             e.save();
 
-            render();
+            renderTemplate("Application/start.html");
         }
     }
     public static void login(String username, String pass){
@@ -137,6 +133,11 @@ public class Application extends Controller {
     }
     public static void register(){
         render();
+    }
+    public static void getJornada(){
+        Jornada j = Jornada.find("byNum_jornada",1).first();
+        if(j==null)renderText("404");
+        else renderJSON(j.partidos);
     }
     public static void register_params(String username, String pass, String name, String surname, String mail, String age) {
 

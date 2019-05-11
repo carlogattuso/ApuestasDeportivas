@@ -121,6 +121,9 @@ public class Application extends Controller {
         if(j==null)renderText("404");
         else renderJSON(j.partidos);
     }
+    public static void Mybets(){
+        renderTemplate("Application/Mybets.html");
+    }
     public static void register_params(String username, String pass, String name, String surname, String mail, String age) {
 
         Usuario found = Usuario.find("byUsername",username).first();

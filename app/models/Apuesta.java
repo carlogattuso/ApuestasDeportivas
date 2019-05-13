@@ -64,4 +64,15 @@ public class Apuesta extends Model {
     public void setJornada(Jornada jornada) {
         this.jornada = jornada;
     }
+
+    @Override
+    public String toString() {
+        return "Apuesta{" +
+                "importe=" + importe +
+                ", pronostico='" + pronostico + '\'' +
+                ", usuario=" + usuario +
+                ", partido=" + partido +
+                ", jornada=" + jornada +
+                '}';
+    }
 }

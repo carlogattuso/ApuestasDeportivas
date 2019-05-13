@@ -124,6 +124,16 @@ public class Application extends Controller {
     public static void Mybets(){
         renderTemplate("Application/Mybets.html");
     }
+    public static void getSaldo(){
+        Usuario user =  Usuario.find("byUsername",session.get("user")).first();
+        renderJSON(user.getSaldo());
+    }
+    public static void getApuestas(){
+        Usuario user =  Usuario.find("byUsername",session.get("user")).first();
+        List<Apuesta> apuestas = Apuesta.find ("byUsuario", user).fetch();
+        System.out.println(apuestas);
+        renderJSON(apuestas);
+    }
     public static void register_params(String username, String pass, String name, String surname, String mail, String age) {
 
         Usuario found = Usuario.find("byUsername",username).first();

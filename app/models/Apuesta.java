@@ -8,8 +8,8 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Apuesta extends Model {
 
-    double importe;
-    String pronostico;
+    private double importe;
+    private String pronostico;
 
     @ManyToOne
     public Usuario usuario;

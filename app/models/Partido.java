@@ -10,15 +10,15 @@ import java.util.Calendar;
 @Entity
 public class Partido extends Model {
 
-    Date fecha;
-    Time hora;
-    String estadio;
-    String local;
-    String visitante;
-    double cuota_1;
-    double cuota_X;
-    double cuota_2;
-    String resultado;
+    private Date fecha;
+    private Time hora;
+    private String estadio;
+    private String local;
+    private String visitante;
+    private double cuota_1;
+    private double cuota_X;
+    private double cuota_2;
+    private String resultado;
 
     public Partido(int año, int mes, int dia, int hora, int minutos, String estadio, String local, String visitante, double cuota_1, double cuota_X, double cuota_2, String resultado) {
         this.estadio = estadio;

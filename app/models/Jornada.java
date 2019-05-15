@@ -10,7 +10,7 @@ import java.util.List;
 @Entity
 public class Jornada extends Model {
 
-    int num_jornada;
+    private int num_jornada;
 
     @OneToMany
     public List<Partido> partidos = new ArrayList<Partido>();

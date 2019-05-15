@@ -1,7 +1,6 @@
 package controllers;
 
 import com.google.gson.JsonObject;
-import org.hibernate.engine.jdbc.connections.internal.UserSuppliedConnectionProviderImpl;
 import play.*;
 import play.mvc.*;
 
@@ -102,7 +101,7 @@ public class Application extends Controller {
             session.put("user", u.username);
             renderTemplate("Application/HomePage.html");
         }
-        }
+    }
     public static void logout() {
         session.clear();
     }
@@ -131,8 +130,13 @@ public class Application extends Controller {
     public static void getApuestas(){
         Usuario user =  Usuario.find("byUsername",session.get("user")).first();
         List<Apuesta> apuestas = Apuesta.find ("byUsuario", user).fetch();
-        System.out.println(apuestas);
-        renderJSON(apuestas);
+        List<ApuestaTO> apuestaTOList = new LinkedList<ApuestaTO>();
+        for(Apuesta a : apuestas){
+            ApuestaTO aTO = new ApuestaTO(a.id,a.partido.id,a.getImporte(),a.getPronostico());
+            apuestaTOList.add(aTO);
+        }
+        System.out.println(apuestaTOList);
+        renderJSON(apuestaTOList);
     }
     public static void register_params(String username, String pass, String name, String surname, String mail, String age) {
 
@@ -145,6 +149,4 @@ public class Application extends Controller {
             renderTemplate("errors/500.html");
         }
     }
-
-
 }

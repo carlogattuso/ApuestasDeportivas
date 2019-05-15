@@ -12,11 +12,11 @@ public class Usuario extends Model {
     public String username;
     @Required
     public String password;
-    String nombre;
-    String apellidos;
-    String correo;
-    int edad;
-    double saldo;
+    private String nombre;
+    private String apellidos;
+    private String correo;
+    private int edad;
+    private double saldo;
 
     public Usuario(String username, String password, String nombre, String apellidos, String correo, int edad, double saldo) {
         this.username = username;

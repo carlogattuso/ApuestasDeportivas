@@ -120,7 +120,6 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#teams">TEAMS</a></li>
                 <li><a href="#matchday">MATCH DAY</a></li>
                 <li><a href="#mybets">MyBETS</a></li>
             </ul>
@@ -176,7 +175,8 @@
     <table class="table table-striped" id="mybets_tabla">
         <thead>
         <tr class="bg-info">
-            <th class="text-center">ID</th>
+            <th class="text-center">Id</th>
+            <th class="text-center">IdPartido</th>
             <th class="text-center">Pronostico</th>
             <th class="text-center">Importe</th>
         </tr>
@@ -187,10 +187,50 @@
 </div>
 <div id="create_container" class="auto container-fluid text-center">
     <p class="serif">Create BET</p>
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-2">
+            <form class="form-horizontal" action="/action_page.php">
+                <div class="form-group">
+                    <label class="control-label" for="email">Match Id:</label>
+                        <input type="text" class="form-control" id="matchId" placeholder="Enter Match Id">
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="pwd">Amount:</label>
+                        <input type="text" class="form-control" id="pwd" placeholder="Enter password">
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-2">
+            <form class="form-horizontal" action="/action_page.php">
+                <label class="control-label" for="email">Forecast:</label>
+                <div class="form-group">
+                        <div class="checkbox">
+                            <label><input type="checkbox" id="Result1">1</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" id="ResultX">X</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" id="Result2">2</label>
+                        </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+        </div>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-2"></div>
+    </div>
 </div>
 </body>
 <script>
+
 $(document).ready(function(){
+    var matchIdArray = [];
     // Add smooth scrolling to all links in navbar + footer link
     $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
         // Make sure this.hash has a value before overriding default behavior
@@ -212,7 +252,6 @@ $(document).ready(function(){
             });
         } // End if
     });
-    console.log("Hola");
     $.get("http://localhost:9000/Application/getUsername", function (data) {
         var name = data.username;
         document.getElementById('usuario').innerHTML = name;
@@ -223,17 +262,15 @@ $(document).ready(function(){
         console.log(data);
         console.log(saldo);
     }, "json");
-    var id = 0;
     $.get( "http://localhost:9000/Application/getJornada", function( data ) {
         $.each(data, function (index, element) {
+            var id = element.id;
             var local = element.local;
-            console.log(data);
             var visitante = element.visitante;
             var fecha = element.fecha;
             var cuota_1 = element.cuota_1;
             var cuota_2 = element.cuota_2;
             var cuota_X = element.cuota_X;
-            id++;
             var insertion = "<tr><td>" + id + "</td><td>" + fecha + "</td><td> " + local + "</td><td>" + visitante + "</td><td>" + cuota_1 + "</td><td>" + cuota_2 + "</td><td>" + cuota_X + "</td></tr>";
             $("#tabla_jornada tbody").append(insertion);
         });
@@ -243,14 +280,15 @@ $(document).ready(function(){
         tabla.style.display="block";
         var crear = document.getElementById('create_container');
         crear.style.display="none";
+        $('#mybets_tabla tbody tr').remove();
         $.get("http://localhost:9000/Application/getApuestas", function (data) {
             $.each(data, function (index, element) {
                 var id = element.id;
+                var idPartido = element.idPartido;
                 var pronostico = element.pronostico;
                 var importe = element.importe;
                 console.log("apuestas:",data);
-                id++;
-                var insertion = "<tr><td>" + id + "</td><td>" + pronostico + "</td><td> " + importe + "</td></tr>";
+                var insertion = "<tr class=\"bg-info\"><td>" + id + "</td><td>" + idPartido + "</td><td>" + pronostico + "</td><td> " + importe + "</td></tr>";
                 $("#mybets_tabla tbody").append(insertion);
             });
         }, "json");
@@ -262,5 +300,6 @@ $(document).ready(function(){
         crear.style.display = "block";
     })
 })
+
 </script>
 </html>

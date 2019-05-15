@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e3c12a53-e680-44fc-ac3f-3dbe24327a86" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Apuestas_Deportivas.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Apuestas_Deportivas.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Apuesta.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Apuesta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/Application/HomePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Application/HomePage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/Application/Mybets.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Application/Mybets.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/tmp/classes/" />
@@ -20,7 +17,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
+            <state relative-caret-position="1904">
               <caret line="132" column="57" selection-start-line="132" selection-start-column="57" selection-end-line="132" selection-end-column="57" />
             </state>
           </provider>
@@ -29,8 +26,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/Usuario.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="26" column="12" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+            <state relative-caret-position="391">
+              <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -38,20 +35,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/Application/HomePage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="559">
-              <caret line="249" column="28" selection-start-line="249" selection-end-line="250" />
+            <state relative-caret-position="255">
+              <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/Application/Mybets.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="177" column="43" selection-start-line="177" selection-start-column="43" selection-end-line="177" selection-end-column="43" />
+            <state relative-caret-position="4369">
+              <caret line="257" column="25" selection-start-line="257" selection-start-column="25" selection-end-line="257" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -59,8 +56,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/Partido.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="18" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="18" />
+            <state relative-caret-position="204">
+              <caret line="17" column="18" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#Partido#0;class#Partido#0" />
@@ -86,7 +83,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/Application/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1518">
+            <state relative-caret-position="68">
               <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
@@ -113,8 +110,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/Application/start.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="261" column="30" lean-forward="true" selection-start-line="260" selection-start-column="2" selection-end-line="261" selection-end-column="30" />
+            <state relative-caret-position="4437">
+              <caret line="261" column="30" selection-start-line="260" selection-start-column="2" selection-end-line="261" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -274,8 +271,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557766615983" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557829954473" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../EscapeRoom" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
@@ -345,7 +342,9 @@
       <workItem from="1557560741436" duration="1151000" />
       <workItem from="1557561924637" duration="3027000" />
       <workItem from="1557762733570" duration="288000" />
-      <workItem from="1557763040011" duration="3533000" />
+      <workItem from="1557763040011" duration="3711000" />
+      <workItem from="1557772620313" duration="3827000" />
+      <workItem from="1557839470560" duration="957000" />
     </task>
     <task id="LOCAL-00001" summary="Creada la función añadir apuesta vacía.">
       <created>1553103757707</created>
@@ -410,7 +409,14 @@
       <option name="project" value="LOCAL" />
       <updated>1557585878372</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="GetApuestas medio hecho.">
+      <created>1557766749073</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1557766749073</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -446,7 +452,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82919000" />
+    <option name="totallyTimeSpent" value="87881000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -461,7 +467,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20738254" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21275167" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -539,7 +545,8 @@
     <MESSAGE value="Teams+jornada ACABADA." />
     <MESSAGE value="Intento de mybets." />
     <MESSAGE value="Intento de mybets progresivo." />
-    <option name="LAST_COMMIT_MESSAGE" value="Intento de mybets progresivo." />
+    <MESSAGE value="GetApuestas medio hecho." />
+    <option name="LAST_COMMIT_MESSAGE" value="GetApuestas medio hecho." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/models/Calendario.java" />
@@ -617,27 +624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/Application/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/Application/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1518">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/Application/start.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="261" column="30" lean-forward="true" selection-start-line="260" selection-start-column="2" selection-end-line="261" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
@@ -645,10 +631,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1904">
+          <caret line="132" column="57" selection-start-line="132" selection-start-column="57" selection-end-line="132" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Usuario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/Application/Mybets.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4369">
+          <caret line="257" column="25" selection-start-line="257" selection-start-column="25" selection-end-line="257" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Partido.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="18" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="18" />
+        <state relative-caret-position="204">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Partido#0;class#Partido#0" />
@@ -670,20 +680,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Usuario.java">
+    <entry file="file://$PROJECT_DIR$/app/views/Application/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="26" column="12" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/Application/HomePage.html">
+    <entry file="file://$PROJECT_DIR$/app/views/Application/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="249" column="28" selection-start-line="249" selection-end-line="250" />
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
@@ -694,10 +701,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Application.java">
+    <entry file="file://$PROJECT_DIR$/app/views/Application/start.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="132" column="57" selection-start-line="132" selection-start-column="57" selection-end-line="132" selection-end-column="57" />
+        <state relative-caret-position="4437">
+          <caret line="261" column="30" selection-start-line="260" selection-start-column="2" selection-end-line="261" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -708,10 +715,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/Application/Mybets.html">
+    <entry file="file://$PROJECT_DIR$/app/views/Application/HomePage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="177" column="43" selection-start-line="177" selection-start-column="43" selection-end-line="177" selection-end-column="43" />
+        <state relative-caret-position="255">
+          <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
         </state>
       </provider>
     </entry>

@@ -18,6 +18,9 @@
     h1 {
         font-size: 40px;
     }
+    .auto {
+        display: none;
+    }
     p.serif {
         font-family: "Times New Roman", Times, serif;
         font-size: 40px;
@@ -168,20 +171,22 @@
         </div>
     </div>
 </div>
-<div id="mybets_container" class="container-fluid text-center">
-    <p class="serif">MATCH DAY</p>
+<div id="mybets_container" class="auto container-fluid text-center">
+    <p class="serif">My BETS</p>
     <table class="table table-striped" id="mybets_tabla">
         <thead>
         <tr class="bg-info">
             <th class="text-center">ID</th>
             <th class="text-center">Pronostico</th>
             <th class="text-center">Importe</th>
-
         </tr>
         </thead>
         <tbody>
         </tbody>
     </table>
+</div>
+<div id="create_container" class="auto container-fluid text-center">
+    <p class="serif">Create BET</p>
 </div>
 </body>
 <script>
@@ -234,6 +239,10 @@ $(document).ready(function(){
         });
     }, "json" );
     $("#mybetsbutton").click(function () {
+        var tabla = document.getElementById('mybets_container');
+        tabla.style.display="block";
+        var crear = document.getElementById('create_container');
+        crear.style.display="none";
         $.get("http://localhost:9000/Application/getApuestas", function (data) {
             $.each(data, function (index, element) {
                 var id = element.id;
@@ -245,6 +254,12 @@ $(document).ready(function(){
                 $("#mybets_tabla tbody").append(insertion);
             });
         }, "json");
+    })
+    $("#create_bet").click(function () {
+        var tabla = document.getElementById('mybets_container');
+        tabla.style.display = "none";
+        var crear = document.getElementById('create_container');
+        crear.style.display = "block";
     })
 })
 </script>

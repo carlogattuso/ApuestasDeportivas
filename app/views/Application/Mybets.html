@@ -24,7 +24,6 @@
     p.serif {
         font-family: "Times New Roman", Times, serif;
         font-size: 40px;
-
     }
     .bg-grey {
         background-color: #f6f6f6;
@@ -51,7 +50,6 @@
         border: none;
         border-radius: 0;
     }
-
     .thumbnail img {
         width: 100%;
         height: 100%;
@@ -61,15 +59,12 @@
         background-image: none;
         color: #FFD000;
     }
-
     .carousel-indicators li {
         border-color: #FFD000;
     }
-
     .carousel-indicators li.active {
         background-color: #FFD000;
     }
-
     .item h4 {
         font-size: 19px;
         line-height: 1.375em;
@@ -77,7 +72,6 @@
         font-style: italic;
         margin: 70px 0;
     }
-
     .item span {
         font-style: normal;
     }
@@ -91,16 +85,13 @@
         letter-spacing: 4px;
         border-radius: 0;
     }
-
     .navbar li a, .navbar .navbar-brand {
         color: #000 !important;
     }
-
     .navbar-nav li a:hover, .navbar-nav li.active a {
         color: #FFD000 !important;
         background-color: #000 !important;
     }
-
     .navbar-default .navbar-toggle {
         border-color: transparent;
         color: #000 !important;
@@ -135,7 +126,7 @@
 <div class="container-fluid bg-grey text-center">
     <div class="row">
         <div class="col-sm-1">
-             <H3 class="serif">SALDO:</H3>
+            <H3 class="serif">SALDO:</H3>
         </div>
         <div class="col-sm-1">
             <h3 id="saldo" class="serif"></h3>
@@ -171,12 +162,11 @@
     </div>
 </div>
 <div id="mybets_container" class="auto container-fluid text-center">
-    <p class="serif">My BETS</p>
-    <table class="table table-striped" id="mybets_tabla">
+    <p class="serif">MY BETS</p>
+    <table class="table table-striped" id="tabla_mybets">
         <thead>
         <tr class="bg-info">
-            <th class="text-center">Id</th>
-            <th class="text-center">IdPartido</th>
+            <th class="text-center">idPartido</th>
             <th class="text-center">Pronostico</th>
             <th class="text-center">Importe</th>
         </tr>
@@ -193,34 +183,34 @@
         <div class="col-sm-2">
             <form class="form-horizontal" action="/action_page.php">
                 <div class="form-group">
-                    <label class="control-label" for="email">Match Id:</label>
-                        <input type="text" class="form-control" id="matchId" placeholder="Enter Match Id">
+                    <label class="control-label" for="usuario">Match Id:</label>
+                    <input type="text" class="form-control" id="matchId_field" placeholder="Enter Match Id">
                 </div>
                 <div class="form-group">
                     <label class="control-label" for="pwd">Amount:</label>
-                        <input type="text" class="form-control" id="pwd" placeholder="Enter password">
+                    <input type="text" class="form-control" id="amount_field" placeholder="Enter amount">
                 </div>
-            </form>
+            </form>z
         </div>
         <div class="col-sm-2">
             <form class="form-horizontal" action="/action_page.php">
                 <label class="control-label" for="email">Forecast:</label>
-                <div class="form-group">
-                        <div class="checkbox">
-                            <label><input type="checkbox" id="Result1">1</label>
-                        </div>
-                        <div class="checkbox">
-                            <label><input type="checkbox" id="ResultX">X</label>
-                        </div>
-                        <div class="checkbox">
-                            <label><input type="checkbox" id="Result2">2</label>
-                        </div>
+                <div class="radio">
+                    <label><input type="radio" name="optradio" value="1">1</label>
                 </div>
+                <div class="radio">
+                    <label><input type="radio" name="optradio" value="X">X</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="optradio" value="2">2</label>
+                </div>
+                <p></p>
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-default">Submit</button>
+                        <button id="create_bet_button" type="button" class="btn btn-default">Submit</button>
                     </div>
                 </div>
+            </form>
         </div>
         <div class="col-sm-2"></div>
         <div class="col-sm-2"></div>
@@ -228,78 +218,82 @@
 </div>
 </body>
 <script>
-
-$(document).ready(function(){
-    var matchIdArray = [];
-    // Add smooth scrolling to all links in navbar + footer link
-    $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== ""){
-            // Prevent default anchor click behavior
-            event.preventDefault();
-
-            // Store hash
-            var hash = this.hash;
-
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 900, function(){
-
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-            });
-        } // End if
-    });
-    $.get("http://localhost:9000/Application/getUsername", function (data) {
-        var name = data.username;
-        document.getElementById('usuario').innerHTML = name;
-    }, "json");
-    $.get("http://localhost:9000/Application/getSaldo", function (data) {
-        var saldo = data.toString();
-        document.getElementById('saldo').innerHTML = saldo;
-        console.log(data);
-        console.log(saldo);
-    }, "json");
-    $.get( "http://localhost:9000/Application/getJornada", function( data ) {
-        $.each(data, function (index, element) {
-            var id = element.id;
-            var local = element.local;
-            var visitante = element.visitante;
-            var fecha = element.fecha;
-            var cuota_1 = element.cuota_1;
-            var cuota_2 = element.cuota_2;
-            var cuota_X = element.cuota_X;
-            var insertion = "<tr><td>" + id + "</td><td>" + fecha + "</td><td> " + local + "</td><td>" + visitante + "</td><td>" + cuota_1 + "</td><td>" + cuota_2 + "</td><td>" + cuota_X + "</td></tr>";
-            $("#tabla_jornada tbody").append(insertion);
+    $(document).ready(function(){
+        var matchIdArray = [];
+        // Add smooth scrolling to all links in navbar + footer link
+        $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== ""){
+                // Prevent default anchor click behavior
+                event.preventDefault();
+                // Store hash
+                var hash = this.hash;
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 900, function(){
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
         });
-    }, "json" );
-    $("#mybetsbutton").click(function () {
-        var tabla = document.getElementById('mybets_container');
-        tabla.style.display="block";
-        var crear = document.getElementById('create_container');
-        crear.style.display="none";
-        $('#mybets_tabla tbody tr').remove();
-        $.get("http://localhost:9000/Application/getApuestas", function (data) {
+        $.get("http://localhost:9000/Application/getUsername", function (data) {
+            var name = data.username;
+            document.getElementById('usuario').innerHTML = name;
+        }, "json");
+        $.get("http://localhost:9000/Application/getSaldo", function (data) {
+            var saldo = data.toString();
+            document.getElementById('saldo').innerHTML = saldo;
+            console.log(data);
+            console.log(saldo);
+        }, "json");
+        $.get( "http://localhost:9000/Application/getJornada", function( data ) {
             $.each(data, function (index, element) {
                 var id = element.id;
-                var idPartido = element.idPartido;
-                var pronostico = element.pronostico;
-                var importe = element.importe;
-                console.log("apuestas:",data);
-                var insertion = "<tr class=\"bg-info\"><td>" + id + "</td><td>" + idPartido + "</td><td>" + pronostico + "</td><td> " + importe + "</td></tr>";
-                $("#mybets_tabla tbody").append(insertion);
+                var local = element.local;
+                var visitante = element.visitante;
+                var fecha = element.fecha;
+                var cuota_1 = element.cuota_1;
+                var cuota_2 = element.cuota_2;
+                var cuota_X = element.cuota_X;
+                var insertion = "<tr><td>" + id + "</td><td>" + fecha + "</td><td> " + local + "</td><td>" + visitante + "</td><td>" + cuota_1 + "</td><td>" + cuota_2 + "</td><td>" + cuota_X + "</td></tr>";
+                $("#tabla_jornada tbody").append(insertion);
             });
-        }, "json");
+        }, "json" );
+        $("#mybetsbutton").click(function () {
+            var tabla = document.getElementById('mybets_container');
+            tabla.style.display="block";
+            var crear = document.getElementById('create_container');
+            crear.style.display="none";
+            $('#mybets_tabla tbody tr').remove();
+            $.get("http://localhost:9000/Application/getApuestas", function (data) {
+                $.each(data, function (index, element) {
+                    var id = element.id;
+                    var idPartido = element.idPartido;
+                    var pronostico = element.pronostico;
+                    var importe = element.importe;
+                    console.log("apuestas:",data);
+                    var insertion = "<tr class=\"bg-info\"><td>" + idPartido + "</td><td>" + pronostico + "</td><td> " + importe + "</td></tr>";
+                    $("#mybets_tabla tbody").append(insertion);
+                });
+            }, "json");
+        })
+        $("#create_bet").click(function () {
+            var tabla = document.getElementById('mybets_container');
+            tabla.style.display = "none";
+            var crear = document.getElementById('create_container');
+            crear.style.display = "block";
+        })
+        $("#create_bet_button").click(function(){
+            var idPartido = $("#matchId_field").val();
+            var amount = $("#amount_field").val();
+            var radioValue = $("input[name='optradio']:checked").val();
+            alert(idPartido+","+amount+","+radioValue);
+            $.get("http://localhost:9000/Application/createBet?idPartido="+idPartido+"&importe="+amount+"&pronostico="+radioValue, function (data) {
+                alert(data);
+            });
+        });
     })
-    $("#create_bet").click(function () {
-        var tabla = document.getElementById('mybets_container');
-        tabla.style.display = "none";
-        var crear = document.getElementById('create_container');
-        crear.style.display = "block";
-    })
-})
-
 </script>
 </html>

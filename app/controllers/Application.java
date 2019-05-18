@@ -12,6 +12,9 @@ import java.util.*;
 import java.util.*;
 
 import models.*;
+import sun.rmi.runtime.Log;
+
+import javax.mail.Part;
 
 public class Application extends Controller {
 
@@ -148,5 +151,24 @@ public class Application extends Controller {
         else {
             renderTemplate("errors/500.html");
         }
+    }
+    public static void createBet(Long idPartido, String importe, String pronostico){
+        Apuesta a;
+
+        a = new Apuesta(Double.parseDouble(importe), pronostico).save();
+
+        Usuario user =  Usuario.find("byUsername",session.get("user")).first();
+
+        Partido partido = Partido.findById(idPartido);
+
+        Jornada j = Jornada.find("byNum_jornada",1).first();
+
+        a.usuario = user;
+        a.partido = partido;
+        a.jornada = j;
+
+        a.save();
+
+        renderText("Apuesta añadida");
     }
 }

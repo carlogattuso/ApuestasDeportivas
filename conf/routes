@@ -16,3 +16,6 @@ GET     /public/                                staticDir:public
 
 # Home page
 *       /{controller}                           Application.start
+
+# Catch all
+POST       /{controller}/{action}              {controller}.{action}

@@ -41,14 +41,14 @@ public class ApplicationAndroid extends Controller {
         }
     }
 
-    public static void createBet(ApuestaAndroid apuestaAndroid) {
+    public static void createBet(String username, String importe, int idPartido, String pronostico) {
         Apuesta a;
 
-        a = new Apuesta(Double.parseDouble(apuestaAndroid.getImporte()), apuestaAndroid.getPronostico()).save();
+        a = new Apuesta(Double.parseDouble(importe), pronostico).save();
 
         Usuario user = Usuario.find("byUsername", session.get("user")).first();
 
-        Partido partido = Partido.findById(apuestaAndroid.getIdPartido());
+        Partido partido = Partido.findById(idPartido);
 
         Jornada j = Jornada.find("byNum_jornada", 1).first();
 

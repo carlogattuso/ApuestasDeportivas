@@ -41,10 +41,11 @@ public class ApplicationAndroid extends Controller {
         }
     }
 
-    public static void createBet(ApuestaAndroid apuestaAndroid) {
-        Apuesta a;
+    public static void createBet() {
+        JsonNode json = request().body().asJson();
 
-        a = new Apuesta(Double.parseDouble(apuestaAndroid.getImporte()), apuestaAndroid.getPronostico()).save();
+        System.out.println(json);
+        /*a = new Apuesta(Double.parseDouble(apuestaAndroid.getImporte()), apuestaAndroid.getPronostico()).save();
 
         Usuario user = Usuario.find("byUsername", session.get("user")).first();
 
@@ -56,7 +57,7 @@ public class ApplicationAndroid extends Controller {
         a.partido = partido;
         a.jornada = j;
 
-        a.save();
+        a.save();*/
 
         renderText("Apuesta añadida");
     }

@@ -41,18 +41,15 @@ public class ApplicationAndroid extends Controller {
         }
     }
 
-<<<<<<< HEAD
-    public static void createBet(String username, String importe, int idPartido, String pronostico) {
+   /* public static void createBet(String username, String importe, int idPartido, String pronostico) {
         Apuesta a;
 
         a = new Apuesta(Double.parseDouble(importe), pronostico).save();
-=======
-    public static void createBet() {
-        JsonNode json = request().body().asJson();
+    }*/
+    public static void createBet(String username) {
 
-        System.out.println(json);
+        System.out.println(usernamegit);
         /*a = new Apuesta(Double.parseDouble(apuestaAndroid.getImporte()), apuestaAndroid.getPronostico()).save();
->>>>>>> 4edf8ce6457c358f99afc506e25083bd857ca648
 
         Usuario user = Usuario.find("byUsername", session.get("user")).first();
 

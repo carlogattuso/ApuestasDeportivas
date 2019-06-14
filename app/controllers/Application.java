@@ -163,13 +163,17 @@ public class Application extends Controller {
         Partido partido = Partido.findById(idPartido);
 
         Jornada j = Jornada.find("byNum_jornada",1).first();
+        int x = Double.compare(Double.parseDouble(importe),user.getSaldo());
+        if(x<1) {
+            a.usuario = user;
+            a.partido = partido;
+            a.jornada = j;
+            a.save();
+            user.setSaldo(user.restarSaldo(Double.parseDouble(importe)));
+            user.save();
+            renderText("200");
+        }
+        else renderText("No tienes suficiente dinero.");
 
-        a.usuario = user;
-        a.partido = partido;
-        a.jornada = j;
-
-        a.save();
-
-        renderText("Apuesta añadida");
     }
 }

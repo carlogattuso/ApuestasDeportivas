@@ -93,4 +93,9 @@ public class Usuario extends Model {
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
+
+    public double restarSaldo(double apuesta){
+        return this.saldo=this.saldo-apuesta;
+    }
+
 }

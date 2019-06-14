@@ -163,7 +163,7 @@
 </div>
 <div id="mybets_container" class="auto container-fluid text-center">
     <p class="serif">MY BETS</p>
-    <table class="table table-striped" id="tabla_mybets">
+    <table class="table table-striped" id="mybets_tabla">
         <thead>
         <tr class="bg-info">
             <th class="text-center">idPartido</th>
@@ -291,7 +291,13 @@
             var radioValue = $("input[name='optradio']:checked").val();
             alert(idPartido+","+amount+","+radioValue);
             $.get("http://localhost:9000/Application/createBet?idPartido="+idPartido+"&importe="+amount+"&pronostico="+radioValue, function (data) {
-                alert(data);
+                if(data=="200"){
+                    alert("Apuesta añadida");
+                    var saldo = document.getElementById('saldo').innerHTML;
+                    saldo=saldo-amount;
+                    document.getElementById('saldo').innerHTML = saldo;
+                }
+                else{alert(data);}
             });
         });
     })

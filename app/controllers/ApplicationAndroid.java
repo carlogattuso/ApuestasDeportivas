@@ -40,31 +40,23 @@ public class ApplicationAndroid extends Controller {
             renderJSON(partidoTOArrayList);
         }
     }
-
-<<<<<<< HEAD
-    public static void createBet(String username, String importe, int idPartido, String pronostico) {
-        Apuesta a;
-
-        a = new Apuesta(Double.parseDouble(importe), pronostico).save();
-=======
+    
     public static void createBet() {
-        JsonNode json = request().body().asJson();
+        JsonObject json;
+        JsonElement element = new JsonParser().parse(
+                new InputStreamReader(request.body)
+        );
+        json = element.getAsJsonObject();
 
-        System.out.println(json);
-        /*a = new Apuesta(Double.parseDouble(apuestaAndroid.getImporte()), apuestaAndroid.getPronostico()).save();
->>>>>>> 4edf8ce6457c358f99afc506e25083bd857ca648
+        double importe = Double.parseDouble(json.get("importe").toString());
 
-        Usuario user = Usuario.find("byUsername", session.get("user")).first();
+        String pronostico = json.get("pronostico").toString();
 
-        Partido partido = Partido.findById(idPartido);
+        String username = json.get("username").toString();
 
-        Jornada j = Jornada.find("byNum_jornada", 1).first();
+        Long idPartido = Long.parseLong(json.get("idPartido").toString());
 
-        a.usuario = user;
-        a.partido = partido;
-        a.jornada = j;
-
-        a.save();*/
+        System.out.println(importe+","+pronostico+","+username+","+idPartido);
 
         renderText("Apuesta añadida");
     }

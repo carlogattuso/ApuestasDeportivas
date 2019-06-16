@@ -1,6 +1,8 @@
 package controllers;
 
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import jdk.nashorn.internal.runtime.Debug;
 import models.*;
 import play.mvc.Controller;
@@ -9,6 +11,7 @@ import sun.rmi.runtime.Log;
 
 import javax.xml.transform.Result;
 import java.io.Console;
+import java.io.InputStreamReader;
 import java.text.Normalizer;
 import java.util.ArrayList;
 
@@ -20,6 +23,20 @@ public class ApplicationAndroid extends Controller {
             renderText("404");
         } else {
             renderText("200");
+        }
+    }
+    public static void getSaldo(){
+        Usuario user =  Usuario.find("byUsername",session.get("user")).first();
+        renderJSON(user.getSaldo());
+    }
+    public static void register(String username, String pass) {
+        Usuario u = Usuario.find("byUsernameAndPassword", username, pass).first();
+        if (u == null) {
+            Usuario a = new Usuario (username,pass,"10","10","10@aprobados",22,100);
+            a.save();
+            renderText("200");
+        } else {
+            renderText("404");
         }
     }
 
@@ -40,29 +57,37 @@ public class ApplicationAndroid extends Controller {
             renderJSON(partidoTOArrayList);
         }
     }
+    public static void createBet() {
+        JsonObject json;
+        JsonElement element = new JsonParser().parse(
+                new InputStreamReader(request.body)
+        );
+        json = element.getAsJsonObject();
 
-   /* public static void createBet(String username, String importe, int idPartido, String pronostico) {
-        Apuesta a;
+        double importe = Double.parseDouble(json.get("importe").toString());
 
-        a = new Apuesta(Double.parseDouble(importe), pronostico).save();
-    }*/
-    public static void createBet(String username) {
+        String pronostico = json.get("pronostico").getAsString();
 
-        System.out.println(usernamegit);
-        /*a = new Apuesta(Double.parseDouble(apuestaAndroid.getImporte()), apuestaAndroid.getPronostico()).save();
+        String username = json.get("username").getAsString();
 
-        Usuario user = Usuario.find("byUsername", session.get("user")).first();
+        String idPartido = json.get("idPartido").getAsString();
 
-        Partido partido = Partido.findById(idPartido);
+        Apuesta apuesta = new Apuesta(importe,pronostico).save();
 
-        Jornada j = Jornada.find("byNum_jornada", 1).first();
+        Usuario user =  Usuario.find("byUsername",username).first();
 
-        a.usuario = user;
-        a.partido = partido;
-        a.jornada = j;
+        Partido partido = Partido.find("byLocal",idPartido).first();
 
-        a.save();*/
+        Jornada j = Jornada.find("byNum_jornada",1).first();
 
-        renderText("Apuesta añadida");
+            apuesta.usuario = user;
+            apuesta.partido = partido;
+            apuesta.jornada = j;
+            apuesta.save();
+
+        System.out.println(importe+","+pronostico+","+username+","+idPartido);
+
+        renderJSON(json);
     }
 }
+
